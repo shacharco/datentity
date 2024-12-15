@@ -1,3 +1,301 @@
-h1 {
-    text-decoration: underline;
-  }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #1E1E1E;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00BFFF;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 5px 0;
+    transition: color 0.3s;
+    position: relative;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #00BFFF;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+header nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #00BFFF, #0077ff);
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+    max-width: 700px;
+}
+
+.hero button {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background-color: #00BFFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero button:hover {
+    background-color: #0099cc;
+}
+
+/* About Section */
+.about {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00BFFF;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Features Section */
+.features {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f0f4f8;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00BFFF;
+}
+
+.features ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: left;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.features ul li {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.features ul li::before {
+    content: '✔';
+    margin-right: 12px;
+    font-size: 1.5rem;
+    color: #00BFFF;
+}
+/* Register Section */
+.register {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+.register h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00BFFF;
+    margin-bottom: 20px;
+}
+
+.register p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+#register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input {
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #00BFFF;
+    outline: none;
+}
+
+/* Register Button */
+.register-btn {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background-color: #00BFFF;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.register-btn:hover {
+    background-color: #0099cc;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00BFFF;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+/* Adjust contact items to align in a row */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.contact-info a {
+    color: #00BFFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    color: #0077cc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #1E1E1E;
+    color: white;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0;
+    color: #bbb;
+}
